@@ -214,6 +214,6 @@ main. PR gồm những gì áp dụng được:
 ## Cần xác nhận với jarviisha khi làm
 
 - Chuyển các file `.md` ở gốc mmerp vào `docs/`.
-- Giữ/bỏ CHANGELOG hiện có của docdoc.
+- ~~Giữ/bỏ CHANGELOG hiện có của docdoc.~~ Giữ và tiếp tục cập nhật trước bản release đầu tiên (jarviisha chọn, 2026-10-24). Quy tắc chung: repo chưa có tag mà đã có CHANGELOG đang được cập nhật thì cứ tiếp tục.
 - Danh sách nhánh cũ sẽ xoá.
 - Mọi thao tác push/PR/đổi cấu hình trên repo taoworklabs (repo tổ chức).
