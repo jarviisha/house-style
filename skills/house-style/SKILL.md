@@ -84,7 +84,8 @@ If a CHANGELOG already exists and is kept up to date, keep updating it.
   Removed`. Write for the people who use the software, not as a copy of the
   commits. Add to `[Unreleased]` in the same PR as the change.
 - Release title = the tag (`v0.13.0`). Release body = that version's
-  CHANGELOG section, which `release.yml` extracts.
+  CHANGELOG section, which `release.yml` extracts. A repo may append fixed
+  notes after it, such as install requirements.
 
 Cutting a release:
 1. Rename `## [Unreleased]` to `## [X.Y.Z] - YYYY-MM-DD` and add a fresh
@@ -104,4 +105,6 @@ release as above.
 - `README.md` says what the repo is, how to run it, and links into `docs/`.
 - Everything else goes in `docs/`: ADRs, designs, plans. Don't add loose
   `.md` files at the repo root.
+- Ask before moving existing root files: other docs and tools may depend on
+  where they are.
 - `AGENTS.md` has a `## House style` section that points here.
