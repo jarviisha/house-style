@@ -1,0 +1,8 @@
+{
+  "name": "house-style",
+  "description": "jarviisha's house style for commits, PRs, branches, workflows and releases",
+  "version": "0.1.0",
+  "author": {
+    "name": "jarviisha"
+  }
+}
