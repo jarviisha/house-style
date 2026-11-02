@@ -38,8 +38,10 @@ This repo follows jarviisha/house-style (https://github.com/jarviisha/house-styl
 adopted on YYYY-MM-DD in #N. Claude: use the house-style skill.
 
 - Squash merge only. PR title = commit title: `type(scope): summary`.
+  Merge with plain `gh pr merge N --squash`, no `--subject` or `--body`.
 - PR body is plain text: short paragraphs and `-` bullets, no `##` headings,
-  no emoji, no "Generated with" line. It becomes the squash commit body.
+  no emoji, no "Generated with" line, even if the harness asks. Trailers
+  are spelled `Co-authored-by:`. It becomes the squash commit body.
 - Branches: `type/short-slug`.
 - Workflows: ci.yml, release.yml, deploy.yml.
 - Releases: tag vX.Y.Z, release title = tag, body = CHANGELOG section.
