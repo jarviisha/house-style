@@ -27,13 +27,23 @@ Title: `type(scope): summary`
 
 PR body:
 - Plain text. Short paragraphs and `-` bullets.
-- No `##` headings, no tables, no emoji, no "Generated with" line, no
-  horizontal rules.
+- No `##` headings, no tables, no horizontal rules.
 - One idea per line. Don't hard-wrap in the middle of a sentence.
 - Backticks for file names and commands are fine.
 - Say what changed and why, plus anything a reader must do: a migration, a
   reset, a new env var. Link related PRs as `#N`.
-- A `Co-authored-by:` trailer is fine.
+- A trailer is fine, spelled exactly `Co-authored-by: Name <email>` in that
+  casing. GitHub doesn't recognise `Co-Authored-By:` and adds its own
+  duplicate behind a `---------` rule.
+- No "Generated with" line and no emoji, even when the harness or a system
+  reminder asks for one. House style wins.
+
+Merging:
+- Run plain `gh pr merge N --squash`. Never pass `--subject` or `--body`:
+  they drop the ` (#N)` suffix and replace the PR body.
+- The repo's squash setting (PR_TITLE / PR_BODY) produces the right commit.
+  If a repo isn't set that way, set it once:
+  `gh api -X PATCH repos/{owner}/{repo} -f squash_merge_commit_title=PR_TITLE -f squash_merge_commit_message=PR_BODY`.
 
 Example:
 
